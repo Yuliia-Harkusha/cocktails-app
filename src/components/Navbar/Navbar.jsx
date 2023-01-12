@@ -1,13 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { CocktailIcon, Navigation, NavList, NavItem } from "./Navbar.styled";
+import {
+  CocktailIcon,
+  Navigation,
+  NavList,
+  NavItem,
+  HeadLink,
+} from "./Navbar.styled";
 
 export const Navbar = () => {
   return (
     <Navigation>
-      <Link to="/">
+      <HeadLink to="/">
         <CocktailIcon />
-      </Link>
+        <h2>TheCocktailDB</h2>
+      </HeadLink>
       <NavList>
         <li>
           <NavItem to="/">Home</NavItem>

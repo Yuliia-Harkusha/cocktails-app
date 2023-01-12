@@ -1,10 +1,10 @@
 export const theme = Object.freeze({
   colors: {
-    accent: "#1d9e37",
-    hover: "#2dbe1d",
+    accent: "#4a9519",
+    hover: "#95BF47",
     gray: "#464444",
     lightGray: "#635050",
-    mainBackground: "#f1f5f8",
+    mainBackground: "#f9f9f8",
     orange: "#f6950d",
     light: "#f2f2f2",
     dark: "#212121",
@@ -13,7 +13,7 @@ export const theme = Object.freeze({
     small: "16px",
     medium: "20px",
     medLarge: "22px",
-    large: "60px",
+    large: "50px",
   },
   fonts: ["sans-serif", "Roboto"],
   spacing: (value) => `${5 * value}px`,
@@ -25,6 +25,6 @@ export const theme = Object.freeze({
     cubicBezier: "0.25s cubic-bezier(0.7, 0.98, 0.86, 0.98)",
   },
   radii: {
-    primary: 5,
+    primary: "5px",
   },
 });

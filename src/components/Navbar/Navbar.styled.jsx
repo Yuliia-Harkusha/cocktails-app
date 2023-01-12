@@ -1,13 +1,6 @@
 import styled from "styled-components";
 import { FaCocktail } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
-
-export const CocktailIcon = styled(FaCocktail)`
-  padding: ${(props) => props.theme.spacing(4)};
-  font-size: ${(props) => props.theme.fontSizes.large};
-  font-weight: 700;
-  color: ${(props) => props.theme.colors.accent};
-`;
+import { NavLink, Link } from "react-router-dom";
 
 export const Navigation = styled.nav`
   display: flex;
@@ -18,6 +11,21 @@ export const Navigation = styled.nav`
   box-shadow: ${(props) => props.theme.shadows.lightShadow};
 `;
 
+export const CocktailIcon = styled(FaCocktail)`
+  font-size: ${(props) => props.theme.fontSizes.large};
+  font-weight: 700;
+  color: ${(props) => props.theme.colors.accent};
+`;
+
+export const HeadLink = styled(Link)`
+  display: flex;
+  align-items: flex-end;
+  gap: ${(props) => props.theme.spacing(3)};
+  padding: ${(props) => props.theme.spacing(2)};
+  font-weight: 700;
+  color: ${(props) => props.theme.colors.accent};
+`;
+
 export const NavList = styled.ul`
   display: flex;
   align-items: center;
@@ -26,12 +34,15 @@ export const NavList = styled.ul`
 
 export const NavItem = styled(NavLink)`
   font-size: ${(props) => props.theme.fontSizes.medLarge};
-  padding: ${(props) => props.theme.spacing(2)};
+  padding: ${(props) => props.theme.spacing(2)}
+    ${(props) => props.theme.spacing(3)};
   font-weight: 700;
   color: ${(props) => props.theme.colors.gray};
   :hover,
   :focus {
     color: ${(props) => props.theme.colors.hover};
+    background-color: ${(props) => props.theme.colors.mainBackground};
+    border-radius: ${(props) => props.theme.radii.primary};
   }
   &.active {
     color: ${(props) => props.theme.colors.accent};
