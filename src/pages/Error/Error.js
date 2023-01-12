@@ -1,13 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Container } from "../../components/Container/Container";
+import { ErrorWrapper, Heading, LinkBtn } from "./Error.styled";
 
 export default function Error() {
   return (
-    <section>
-      <div>
-        <h2>Something went wrong</h2>
-        <Link to="/">Back home</Link>
-      </div>
-    </section>
+    <Container>
+      <ErrorWrapper>
+        <Heading>Something went wrong...</Heading>
+        <LinkBtn to="/">Back home</LinkBtn>
+      </ErrorWrapper>
+    </Container>
   );
 }

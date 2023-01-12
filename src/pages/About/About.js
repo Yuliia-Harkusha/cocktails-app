@@ -1,10 +1,11 @@
 import React from "react";
-import { Heading, Text, Image } from "./About.styled";
+import { Heading, Text, Image, Href } from "./About.styled";
 import Cocktail1 from "../../images/Cocktail1.webp";
+import { Container } from "../../components/Container/Container";
 
 export default function About() {
   return (
-    <section>
+    <Container>
       <Heading>NO ONE KNOWS FOR SURE WHY IT’S CALLED A “COCKTAIL”</Heading>
       <Text>
         There are about as many different explanations for the meaning behind
@@ -19,13 +20,13 @@ export default function About() {
         like a rooster’s tail. As a result, the drink quickly became referred to
         as the cocktail. Yet another everlasting tale connects the mixed drink’s
         origins{" "}
-        <a
+        <Href
           href="https://www.thespruceeats.com/what-is-a-cocktail-760163"
           target="_blank"
           rel="noopener noreferrer"
         >
           to the term for a mixed-breed horse
-        </a>
+        </Href>
         . When horse racing was big in America – and not just in Kentucky – a
         mixed-breed horse was commonly referred to as a cocktail. At a time when
         horse racing and drinking went hand-in-hand (as they still do), the
@@ -42,13 +43,13 @@ export default function About() {
         bartender would probably look at you like you were crazy. While the term
         “cocktail” may refer to hundreds of combinations of drinks today, it was
         originally used to reference one type of mixed drink. Historically, the{" "}
-        <a
+        <Href
           href="https://www.huffpost.com/entry/post_b_9286984"
           target="_blank"
           rel="noopener noreferrer"
         >
           original
-        </a>{" "}
+        </Href>{" "}
         recipe for a cocktail was first recorded by Scottish soldier J. E.
         Alexander in 1831. The base for Alexander’s drink included your choice
         of brandy, gin, or rum with a ratio of one-third spirit to two-thirds
@@ -60,6 +61,6 @@ export default function About() {
         cocktail by combining brandy, orange curacao, bitters, and ice. Yum!
       </Text>
       <Image src={Cocktail1} alt="Cocktail preparing" />
-    </section>
+    </Container>
   );
 }

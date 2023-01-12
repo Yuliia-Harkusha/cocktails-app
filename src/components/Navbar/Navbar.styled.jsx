@@ -39,6 +39,7 @@ export const NavItem = styled(NavLink)`
     ${(props) => props.theme.spacing(3)};
   font-weight: 700;
   color: ${(props) => props.theme.colors.gray};
+  transition: ${(props) => props.theme.animation.cubicBezier};
   :hover,
   :focus {
     color: ${(props) => props.theme.colors.hover};
