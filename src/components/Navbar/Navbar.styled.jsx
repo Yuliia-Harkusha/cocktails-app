@@ -9,6 +9,7 @@ export const Navigation = styled.nav`
   padding: ${(props) => props.theme.spacing(1)}
     ${(props) => props.theme.spacing(7)};
   box-shadow: ${(props) => props.theme.shadows.lightShadow};
+  background-color: #fff;
 `;
 
 export const CocktailIcon = styled(FaCocktail)`
