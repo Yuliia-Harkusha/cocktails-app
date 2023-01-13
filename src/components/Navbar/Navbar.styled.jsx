@@ -16,6 +16,10 @@ export const CocktailIcon = styled(FaCocktail)`
   font-size: ${(props) => props.theme.fontSizes.large};
   font-weight: 700;
   color: ${(props) => props.theme.colors.accent};
+  :hover,
+  :focus {
+    color: ${(props) => props.theme.colors.hover};
+  }
 `;
 
 export const HeadLink = styled(Link)`
