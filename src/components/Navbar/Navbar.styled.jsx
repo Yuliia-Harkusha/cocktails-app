@@ -15,6 +15,7 @@ export const Navigation = styled.nav`
 export const CocktailIcon = styled(FaCocktail)`
   font-size: ${(props) => props.theme.fontSizes.large};
   font-weight: 700;
+  transition: ${(props) => props.theme.animation.cubicBezier};
   color: ${(props) => props.theme.colors.accent};
   :hover,
   :focus {
