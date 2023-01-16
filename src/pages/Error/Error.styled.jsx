@@ -16,8 +16,9 @@ export const Heading = styled.h2`
 export const LinkBtn = styled(Link)`
   display: inline-block;
   text-transform: uppercase;
+  letter-spacing: 0.2rem;
   padding: ${(props) => props.theme.spacing(1)}
-    ${(props) => props.theme.spacing(2)};
+    ${(props) => props.theme.spacing(3)};
   background-color: ${(props) => props.theme.colors.accent};
   color: ${(props) => props.theme.colors.light};
   border-radius: ${(props) => props.theme.radii.primary};
