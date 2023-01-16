@@ -5,6 +5,9 @@ import { Navbar } from "./components/Navbar/Navbar";
 import { Loader } from "./components/Loader/Loader";
 
 const HomePage = lazy(() => import("./pages/Home/Home"));
+const SingleCocktailPage = lazy(() =>
+  import("./pages/SingleCocktail/SingleCocktail")
+);
 const AboutPage = lazy(() => import("./pages/About/About"));
 const ErrorPage = lazy(() => import("./pages/Error/Error"));
 
@@ -17,7 +20,7 @@ export const App = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
-          <Route path="cocktail/:id" />
+          <Route path="cocktail/:id" element={<SingleCocktailPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Suspense>
