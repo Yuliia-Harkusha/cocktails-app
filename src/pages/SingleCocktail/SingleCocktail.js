@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Container } from "../../components/Container/Container";
+import { LinkBtn } from "../../components/Container/Container.styled";
 
 const url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
 
 export default function SingleCocktail() {
   const { id } = useParams();
-  const [cocktail, setCocktail] = useState(null);
+  const [cocktail, setCocktail] = useState("");
 
   useEffect(() => {
     async function getCocktail() {
       try {
         const response = await fetch(`${url}${id}`);
         const data = await response.json();
-        console.log(data);
 
         if (data.drinks) {
           const {
@@ -37,7 +37,6 @@ export default function SingleCocktail() {
             strIngredient4,
             strIngredient5,
           ];
-
           const newCocktail = {
             name,
             image,
@@ -56,19 +55,17 @@ export default function SingleCocktail() {
         console.log(error);
       }
     }
+
     getCocktail();
   }, [id]);
 
-  //   if (!cocktail) {
-  //     return <p> no coktail</p>;
-  //   } else {
-  //     const { name, image, category, info, glass, instructions, ingredients } =
-  //       cocktail;
-  //   }
+  const { name, image, category, info, glass, instructions, ingredients } =
+    cocktail;
 
   return (
     <main>
-      {/* <Container>
+      <Container>
+        <LinkBtn>Go back</LinkBtn>
         <h2>{name}</h2>
         <div>
           <img src={image} alt={name} />
@@ -90,10 +87,14 @@ export default function SingleCocktail() {
             </p>
             <p>
               <span>Ingredients: </span>
+              {ingredients &&
+                ingredients.map((item) => {
+                  return <span> {item}</span>;
+                })}
             </p>
           </div>
         </div>
-      </Container> */}
+      </Container>
     </main>
   );
 }

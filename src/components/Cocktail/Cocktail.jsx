@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import {
   CocktailItem,
   CocktailText,
@@ -8,7 +7,7 @@ import {
   CocktailGlass,
   CocktailInfo,
 } from "./Cocktail.styled";
-import { LinkBtn } from "../../pages/Error/Error.styled";
+import { LinkBtn } from "../Container/Container.styled";
 
 export const Cocktail = ({ id, image, name, info, glass }) => {
   return (

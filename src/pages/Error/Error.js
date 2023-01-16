@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "../../components/Container/Container";
-import { ErrorWrapper, Heading, LinkBtn } from "./Error.styled";
+import { ErrorWrapper, Heading } from "./Error.styled";
+import { LinkBtn } from "../../components/Container/Container.styled";
 
 export default function Error() {
   return (
