@@ -63,6 +63,6 @@ export const DrinkInfo = styled.p`
 export const Ingredient = styled.span`
   :nth-child(n + 2) {
     display: block;
-    margin-left: ${(props) => props.theme.spacing(3)};
+    margin-left: ${(props) => props.theme.spacing(4)};
   }
 `;
