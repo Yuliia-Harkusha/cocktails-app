@@ -38,8 +38,10 @@ export const Image = styled.img`
 
 export const DrinkData = styled.span`
   margin-right: ${(props) => props.theme.spacing(1.5)};
-  padding: ${(props) => props.theme.spacing(0.8)}
-    ${(props) => props.theme.spacing(1.5)};
+  padding-top: ${(props) => props.theme.spacing(0.8)};
+  padding-bottom: ${(props) => props.theme.spacing(0.8)};
+  padding-right: ${(props) => props.theme.spacing(1.5)};
+  padding-left: ${(props) => props.theme.spacing(1.5)};
   background-color: ${(props) => props.theme.colors.hover};
   color: ${(props) => props.theme.colors.gray};
   border-radius: ${(props) => props.theme.radii.primary};
@@ -61,5 +63,6 @@ export const DrinkInfo = styled.p`
 export const Ingredient = styled.span`
   :nth-child(n + 2) {
     display: block;
+    margin-left: ${(props) => props.theme.spacing(3)};
   }
 `;
