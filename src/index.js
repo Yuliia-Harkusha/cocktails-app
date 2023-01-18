@@ -13,7 +13,7 @@ root.render(
   <React.StrictMode>
     <AppProvider>
       <ThemeProvider theme={theme}>
-        <BrowserRouter basename="cocktails-app">
+        <BrowserRouter>
           <App />
         </BrowserRouter>
       </ThemeProvider>

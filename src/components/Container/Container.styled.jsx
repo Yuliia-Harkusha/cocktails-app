@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const ContainerWrapper = styled.div`
-  width: 800px;
+  width: 900px;
   margin: 0 auto;
   padding: ${(props) => props.theme.spacing(5)};
 `;
